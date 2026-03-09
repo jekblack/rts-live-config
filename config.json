@@ -65,9 +65,9 @@
   },
 
   "Dice": {
-    "Small":  { "faces": 6, "scale": 3,  "slapForceMultiplier": 0.75 },
-    "Medium": { "faces": 6, "scale": 6,  "slapForceMultiplier": 1.5  },
-    "Large":  { "faces": 6, "scale": 10, "slapForceMultiplier": 3.0  }
+    "Small":  { "faces": 6, "scale": 3,  "slapForceMultiplier": 1 },
+    "Medium": { "faces": 6, "scale": 6,  "slapForceMultiplier": 1  },
+    "Large":  { "faces": 6, "scale": 10, "slapForceMultiplier": 1  }
   },
 
   "DiceRespawn": {
