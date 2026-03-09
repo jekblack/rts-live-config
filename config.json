@@ -1,3 +1,224 @@
 {
-  "Knockback": { "BaseForce": 2 }   
+  "_note": "This is the full tunable config. Copy into your rts-live-config GitHub repo as config.json. Remove or trim keys you are not actively changing — the server only needs the keys you want to override. Vector3/Color3 values and asset IDs are intentionally excluded.",
+
+  "Combat": {
+    "SlapRange": 15,
+    "SlapCooldownSecs": 0.5,
+    "MinSlapFireIntervalSecs": 0.1,
+    "JuiceCap": 20,
+    "JuiceDecayInterval": 60,
+    "FrartBaseCritChance": 0.15,
+    "FrartFreezeDuration": 3
+  },
+
+  "Knockback": {
+    "BaseForce": 100,
+    "MinCooldownFactor": 0.2,
+    "UpwardBias": 0.6
+  },
+
+  "Movement": {
+    "WalkSpeed": 22,
+    "SprintSpeed": 40,
+    "JumpPower": 50,
+    "StaminaMax": 5,
+    "StaminaDrain": 1,
+    "StaminaRegen": 0.5
+  },
+
+  "SlapTypes": {
+    "Forward": { "cooldown": 0.8 },
+    "Left":    { "cooldown": 0.8 },
+    "Right":   { "cooldown": 0.8 },
+    "Up":      { "cooldown": 0.8 },
+    "Down":    { "cooldown": 0.8 }
+  },
+
+  "Carry": {
+    "PickupRange": 15,
+    "CarryDist": 5,
+    "CarryHeight": 1.5,
+    "SpringK": 20,
+    "MaxCarryVelocity": 60,
+    "FlingLookSpeed": 30,
+    "FlingUpSpeed": 5,
+    "FlingHRPMult": 1.2,
+    "PendingReleaseWindow": 0.4,
+    "DieMaxFlingSpeed": 80,
+    "DefaultMaxFlingSpeed": 150,
+    "HintPx": 130,
+    "CursorRayLength": 40
+  },
+
+  "SlapZone": {
+    "DicePerPlayerRatio": 0.5,
+    "ResultDisplayDuration": 3
+  },
+
+  "DicePhysics": {
+    "SettleAngularVelocityThreshold": 0.5,
+    "SettleLinearVelocityThreshold": 0.5,
+    "SettleCheckInterval": 0.1,
+    "SettleTimeout": 15,
+    "PickupRadius": 12,
+    "VoidYThreshold": -5
+  },
+
+  "Dice": {
+    "Small":  { "faces": 6, "scale": 3,  "slapForceMultiplier": 0.75 },
+    "Medium": { "faces": 6, "scale": 6,  "slapForceMultiplier": 1.5  },
+    "Large":  { "faces": 6, "scale": 10, "slapForceMultiplier": 3.0  }
+  },
+
+  "DiceRespawn": {
+    "MinThrowsBeforeChance": 1,
+    "DespawnChance": 1,
+    "RespawnRadius": 100
+  },
+
+  "Void": {
+    "YThreshold": -10,
+    "SafeYMin": 2,
+    "SettledMaxY": 10.0,
+    "KnockbackGracePeriod": 0.5,
+    "ObservedYVelThreshold": 4.0,
+    "RespawnDelay": 1.5
+  },
+
+  "Powerups": {
+    "SpawnCheckInterval": 8,
+    "SpawnChance": 0.65,
+    "MaxActive": 1,
+    "SpawnRadius": 22,
+    "ActivationDistance": 12
+  },
+
+  "Props": {
+    "Count": 10,
+    "RespawnCheckInterval": 2
+  },
+
+  "Allies": {
+    "StandardSpinCost": 3,
+    "PremiumSpinCost": 10,
+    "DuplicateConsolation": 5,
+    "PityThreshold": 20,
+    "SoftPityStart": 15,
+    "StandardWeights": { "Common": 70, "Rare": 25, "Legendary": 5 },
+    "PremiumWeights":  { "Common": 40, "Rare": 40, "Legendary": 20 },
+    "Catalog": [
+      { "name": "Gimli",            "stats": { "resistance": 0.07, "frartBoost": 0,    "speed": 0, "jump": 0, "range": 0 } },
+      { "name": "BasicRacer",       "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 2, "jump": 0, "range": 0 } },
+      { "name": "BasicJumper",      "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 0, "jump": 3, "range": 0 } },
+      { "name": "Slapbug",          "stats": { "resistance": 0.05, "frartBoost": 0,    "speed": 0, "jump": 0, "range": 0 } },
+      { "name": "Wobblecat",        "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 2, "jump": 0, "range": 0 } },
+      { "name": "Blopfish",         "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 0, "jump": 0, "range": 1 } },
+      { "name": "Squeakpaw",        "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 0, "jump": 3, "range": 0 } },
+      { "name": "Iron Turtle",      "stats": { "resistance": 0.12, "frartBoost": 0,    "speed": 0, "jump": 0, "range": 0 } },
+      { "name": "Windrunner",       "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 4, "jump": 0, "range": 0 } },
+      { "name": "Longreach Lizard", "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 0, "jump": 0, "range": 2 } },
+      { "name": "Springfoot",       "stats": { "resistance": 0,    "frartBoost": 0.03, "speed": 0, "jump": 6, "range": 0 } },
+      { "name": "The Unmovable",    "stats": { "resistance": 0.20, "frartBoost": 0,    "speed": 0, "jump": 0, "range": 0 } },
+      { "name": "Flashpaw",         "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 7, "jump": 0, "range": 0 } },
+      { "name": "Reachmaster",      "stats": { "resistance": 0,    "frartBoost": 0,    "speed": 0, "jump": 0, "range": 4 } },
+      { "name": "Crit Goblin",      "stats": { "resistance": 0,    "frartBoost": 0.08, "speed": 0, "jump": 0, "range": 0 } }
+    ]
+  },
+
+  "SlapHands": {
+    "SpinCost": 100,
+    "DuplicateConsolation": 10,
+    "DirectPurchaseCost": {
+      "Common": 150,
+      "Rare": 400,
+      "Legendary": 1200,
+      "Mythic": 3000
+    },
+    "PityThreshold": 25,
+    "SoftPityStart": 20,
+    "TierWeights": {
+      "Common": 60,
+      "Rare": 30,
+      "Legendary": 10
+    },
+    "Tiers": {
+      "Common":    { "forceMult": 1.0 },
+      "Rare":      { "forceMult": 1.4 },
+      "Legendary": { "forceMult": 2.0 },
+      "Mythic":    { "forceMult": 3.0 }
+    }
+  },
+
+  "Chain": {
+    "DoubleDiamonds": 2,
+    "TripleDiamonds": 8,
+    "QuadDiamonds": 25,
+    "StraightThreeDiamonds": 8,
+    "StraightFourDiamonds": 25
+  },
+
+  "AmbientMusic": {
+    "Volume": 0.10,
+    "RollOffMinDistance": 100,
+    "RollOffMaxDistance": 380
+  },
+
+  "DailyReward": {
+    "CadenceHrs": 6,
+    "ClaimCooldownSecs": 5
+  },
+
+  "Monetization": {
+    "VIPDiscountRate": 0.20,
+    "SessionDiamondCap": 10000,
+    "SessionVoidCap": 500
+  },
+
+  "HandVisual": {
+    "ScaleMultiplier": 1.5,
+    "SwingDuration": 0.18
+  },
+
+  "World": {
+    "SlapZoneRadius": 150,
+    "LastChancePlatforms": {
+      "Count": 15,
+      "OrbitRadius": 165,
+      "Speed": 0.10,
+      "SafeRadius": 180,
+      "YOffset": -3
+    },
+    "BossSpot": {
+      "DetectBuffer": 3,
+      "CheckInterval": 0.5
+    }
+  },
+
+  "Hub": {
+    "CorridorEnd": 100,
+    "CorridorWidth": 24,
+    "CorridorFloorY": 1.5,
+    "ShopClickRadius": 20,
+    "ShopClickCooldown": 5
+  },
+
+  "Leaderboard": {
+    "RefreshInterval": 60,
+    "TopCount": 10,
+    "NewPlayerDelaySecs": 3
+  },
+
+  "VFX": {
+    "SlapFlash": {
+      "Duration": 0.15
+    },
+    "GlowBrightness": {
+      "Idle": 0,
+      "Targeted": 0.5,
+      "Held": 1,
+      "Spinning": 2,
+      "InFlight": 3,
+      "Settled": 1.5
+    }
+  }
 }
