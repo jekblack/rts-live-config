@@ -1,6 +1,16 @@
 {
   "_note": "This is the full tunable config. Copy into your rts-live-config GitHub repo as config.json. Remove or trim keys you are not actively changing — the server only needs the keys you want to override. Vector3/Color3 values and asset IDs are intentionally excluded.",
+  
+  "poll": {
+    "id": "poll_001",
+    "question": "How fun is slapping?",
+    "type": "slider",
+    "min": 1, "max": 10,
+    "minLabel": "Not fun", "maxLabel": "Very fun"
+  }
 
+
+  
   "Combat": {
     "SlapRange": 15,
     "SlapCooldownSecs": 0.5,
