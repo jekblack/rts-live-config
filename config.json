@@ -1,6 +1,10 @@
 {
   "_note": "This is the full tunable config. Copy into your rts-live-config GitHub repo as config.json. Remove or trim keys you are not actively changing — the server only needs the keys you want to override. Vector3/Color3 values and asset IDs are intentionally excluded.",
-  
+  "Allies": { 
+    "AllyStats": { 
+      "Iron Turtle": { 
+        "resistance": 0.20 } }, 
+    "RollCost": 8 } ,
   "poll": {
     "id": "poll_001",
     "question": "How fun is slapping?",
